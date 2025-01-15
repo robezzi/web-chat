@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
-export const StyledMessage = styled.div`
+export const StyledMessage = styled.div<IStyledMessageContentProps>`
     display: grid;
     grid-template-columns: max-content max-content;
     gap: 8px;
     align-items: flex-end;
+    justify-content: ${({ isOwner }) => (isOwner ? 'end' : 'start')};
 `;
 
 interface IStyledMessageContentProps {
@@ -14,8 +15,6 @@ interface IStyledMessageContentProps {
 export const StyledMessageContent = styled.div<IStyledMessageContentProps>`
     background: ${({ theme, isOwner }) =>
         isOwner ? theme.colors.messageBg : theme.colors.lightgray};
-    margin: ${({ isOwner }) =>
-        isOwner ? "right" : "left"};
     max-width: 496px;
     border-radius: 12px 12px 12px 0;
     padding: 8px 16px;

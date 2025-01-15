@@ -11,7 +11,7 @@ export interface ISendEmailArgs {
 @Injectable()
 export class MailerService {
     transporter = nodemailer.createTransport({
-        host: 'smtp.yandex.ru',
+        host: 'smtp.mail.ru',
         port: 465,
         secure: true, // true for 465, false for other ports
         auth: {

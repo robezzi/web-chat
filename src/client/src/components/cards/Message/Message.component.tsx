@@ -21,7 +21,7 @@ export const Message: React.FC<IMessageProps> = ({
     className,
 }) => {
     return (
-        <StyledMessage className={className}>
+        <StyledMessage className={className} isOwner={isOwner}>
             <Avatar
                 width="24px"
                 height="24px"

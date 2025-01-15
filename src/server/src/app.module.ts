@@ -21,7 +21,7 @@ import { AuthModule } from './auth/auth.module';
             host: process.env.DB_HOST,
             port: 5432,
             username: 'postgres',
-            password: 'postgres',
+            password: 'root',
             database: 'web-chat',
             entities: [__dirname + '/**/*.entity{.ts,.js}'],
             synchronize: true,
